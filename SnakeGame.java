@@ -54,7 +54,7 @@ public class SnakeGame extends Game {
 
     public void onTurn(int t){
         snake.move(apple);
-        if (apple.isAlive==false){createNewApple(); score =+ 5; setScore(score); turnDelay = turnDelay - 10; setTurnTimer(turnDelay);}
+        if (apple.isAlive==false){createNewApple(); score = score + 5; setScore(score); turnDelay = turnDelay - 10; setTurnTimer(turnDelay);}
         if (snake.isAlive==false) {gameOver();}
         if (snake.getLength()>GOAL) {win();}
         drawScene();
